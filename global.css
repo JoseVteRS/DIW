@@ -27,9 +27,34 @@
   background-color: var(--color-primary);
   max-width: var(--container-lg);
   margin-inline: auto;
+  border-radius: var(--radius-sm);
+  margin-top: 1rem;
+}
+
+.Header__carrito {
+  position: relative;
+}
+
+.Header__carrito-indicados {
+  position: absolute;
+  background-color: var(--color-secondary);
+  color: var(--color-text-claro);
+  border-radius: 9999px;
+  padding: 5px;
+  width: 15px;
+  height: 15px;
+  display: grid;
+  place-content: center;
+  font-size: .65rem;
+  font-weight: 700;
+  top: -10px;
+  right: -10px;
 }
 
 .Header__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding-block: 1em;
   padding-inline: 1em;
 }
