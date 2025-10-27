@@ -1,0 +1,62 @@
+.Comprar {
+    width: 100%;
+    max-width: var(--container-lg);
+    margin-inline: auto;
+}
+
+.Comprar__form fieldset {
+    border: 1px solid var(--color-primary);
+    padding: 3em;
+    margin-block: 1em;
+    border-radius: 0.5em;
+}
+
+.Comprar__form fieldset:focus-within {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.Comprar__form legend {
+    font-weight: 700;
+    padding: 0em 1em;
+}
+
+.Comprar__grupo-input {
+    display: flex;
+    flex-direction: column;
+    margin-block: 1em;
+}
+
+.Comprar__form input {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+    font-size: 1em;
+}
+
+.Comprar__form textarea {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 0.25em;
+    font-size: 1em;
+    resize: vertical;
+}
+
+.Comprar__form button[type="submit"] {
+    background-color: var(--color-primary);
+    color: var(--color-text-claro);
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 0.5em;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.Comprar__form button[type="submit"]:hover {
+    background-color: var(--color-secondary);
+}
+
+.Comprar__form button[type="submit"]:focus {
+    transform: scale(0.98);
+}

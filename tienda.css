@@ -1,0 +1,105 @@
+/* Tienda */
+
+/* 
+Hay clases que repiten estilos de Home, lo interesante seria crear clases comunes para no repetir código. Por ejemplo crear una clase Producto y que sirva tanto para Home como para Tienda.
+Lo he hecho de esta manera agrupando más por página y semántica.
+*/
+
+.Tienda {
+  width: 100%;
+  max-width: var(--container-lg);
+  margin-inline: auto;
+}
+
+.Tienda__container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  width: 100%;
+}
+
+.Tienda__aside {
+  width: 20%;
+  background-color: var(--color-background);
+  padding-inline: 2rem;
+  padding-block: 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.Tienda__aside-item {
+  margin-block: 2rem;
+}
+
+.Tienda__aside-item:first-child {
+  margin-block-start: 0;
+}
+
+.Tienda__section {
+  width: 80%;
+  background-color: var(--color-background);
+  padding: 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.Tienda__productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.Tienda__producto {
+  background-color: var(--color-text-claro);
+  box-shadow: 0 6px 18px rgba(44, 62, 80, 0.08);
+  border: 1px solid rgba(44, 62, 80, 0.06);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  transition: ease all 0.3s;
+}
+
+.Tienda__producto:hover {
+  box-shadow: 0 12px 24px rgba(44, 62, 80, 0.12);
+  border-color: var(--color-primary);
+}
+
+.Tienda__producto img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: calc(var(--radius-sm) - 2px);
+}
+
+.Tienda__producto-descripcion {
+  font-size: 0.95rem;
+  color: rgba(44, 62, 80, 0.8);
+  flex-grow: 1;
+}
+
+.Tienda__producto-boton {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  align-self: end;
+  transition: ease all 0.3s;
+}
+
+.Tienda__producto-boton:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+.Tienda__producto-boton:active {
+  background-color: var(--color-secondary);
+  transform: scale(0.9);
+  /* transform: scale(0.9); */
+}
+
+.Tienda__producto-boton:hover {
+  background-color: var(--color-secondary);
+  box-shadow: 0 6px 12px rgba(44, 62, 80, 0.2);
+}
