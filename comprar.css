@@ -1,3 +1,9 @@
+/*
+    comprar.css
+    Estilos para el formulario de compra
+    Mejora de accesibilidad: focus states y fieldset con focus-within.
+*/
+
 .Comprar {
     width: 100%;
     max-width: var(--container-lg);

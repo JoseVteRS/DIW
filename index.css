@@ -1,6 +1,12 @@
 
 
 
+/*
+  index.css
+  Estilos para la página de inicio (Home)
+  Notas de accesibilidad: imágenes con loading=lazy en HTML, botones con foco visible.
+*/
+
 /* Productos */
 
 .Home {

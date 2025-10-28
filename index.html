@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -11,11 +11,11 @@
 
 <body>
 
-    <header class="Header">
-        <nav class="Header__nav">
+    <header class="Header" role="banner">
+        <nav class="Header__nav" role="navigation" aria-label="Menú principal">
             <ul class="Header__lista">
                 <li class="Header__item">
-                    <a class="Header__link Header__link--is-active" href="/">Inicio</a>
+                    <a class="Header__link Header__link--is-active" href="./index.html">Inicio</a>
                 </li>
                 <li class="Header__item">
                     <a href="./tienda.html" class="Header__link">Tienda</a>
@@ -25,34 +25,35 @@
                 </li>
             </ul>
 
-            <div class="Header__carrito">
+            <!-- Botón de carrito accesible -->
+            <button class="Header__carrito" title="Abrir carrito">
+                <img src="./iconos/shopping-cart.png" width="16" height="16" alt="Carrito de compras" />
                 <span class="Header__carrito-indicados">8</span>
-                <img src="./iconos/shopping-cart.png" width="16" height="16" alt="Icono de carrito de compras" />
-            </div>
+            </button>
         </nav>
     </header>
 
-    <main class="Home">
+    <main id="main" class="Home" role="main">
         <h1 class="Home__titulo">TiendaLocal</h1>
         <section class="Home__section">
             <h2 class="Home__subtitulo">Productos</h2>
             <div class="Home__productos">
                 <article class="Home__producto">
                     <h3 class="Home__producto-titulo">Producto 1</h3>
-                    <img src="https://placehold.co/150" width="150" height="150" />
+                    <img src="https://placehold.co/150" width="150" height="150" alt="Imagen del Producto 1" loading="lazy" />
                     <p class="Home__producto-descripcion">Descripción del Producto 1</p>
                     <button class="Home__producto-boton">Añadir al carrito</button>
                 </article>
                 <article class="Home__producto">
-                    <h3 class="Home__producto-titulo">Producto 1</h3>
-                    <img src="https://placehold.co/150" width="150" height="150" />
-                    <p class="Home__producto-descripcion">Descripción del Producto 1</p>
+                    <h3 class="Home__producto-titulo">Producto 2</h3>
+                    <img src="https://placehold.co/150" width="150" height="150" alt="Imagen del Producto 2" loading="lazy" />
+                    <p class="Home__producto-descripcion">Descripción del Producto 2</p>
                     <button class="Home__producto-boton">Añadir al carrito</button>
                 </article>
                 <article class="Home__producto">
-                    <h3 class="Home__producto-titulo">Producto 1</h3>
-                    <img src="https://placehold.co/150" width="150" height="150" />
-                    <p class="Home__producto-descripcion">Descripción del Producto 1</p>
+                    <h3 class="Home__producto-titulo">Producto 3</h3>
+                    <img src="https://placehold.co/150" width="150" height="150" alt="Imagen del Producto 3" loading="lazy" />
+                    <p class="Home__producto-descripcion">Descripción del Producto 3</p>
                     <button class="Home__producto-boton">Añadir al carrito</button>
                 </article>
                 <article class="Home__producto">
@@ -164,8 +165,51 @@
                 </article>
             </div>
         </section>
+        </section>
+        <section class="Home__section">
+            <h2 class="Home__subtitulo">Productos alta demanda</h2>
+            <div class="Home__productos">
+                <article class="Home__producto">
+                    <h3 class="Home__producto-titulo">Producto destacado A</h3>
+                    <img src="https://placehold.co/150" width="150" height="150" alt="Imagen del Producto destacado A" loading="lazy" />
+                    <p class="Home__producto-descripcion">Descripción del producto destacado A</p>
+                    <button class="Home__producto-boton">Añadir al carrito</button>
+                </article>
+                <article class="Home__producto">
+                    <h3 class="Home__producto-titulo">Producto destacado B</h3>
+                    <img src="https://placehold.co/150" width="150" height="150" alt="Imagen del Producto destacado B" loading="lazy" />
+                    <p class="Home__producto-descripcion">Descripción del producto destacado B</p>
+                    <button class="Home__producto-boton">Añadir al carrito</button>
+                </article>
+            </div>
+        </section>
     </main>
 
+    <!-- Pie de página rediseñado -->
+    <footer class="Footer">
+        <div class="Footer__inner">
+            <div class="Footer__col Footer__brand">
+                <h3 class="Footer__title">TiendaLocal</h3>
+                <p class="Footer__desc">Productos locales.</p>
+                <p class="Footer__copy">© 2025 TiendaLocal</p>
+            </div>
+
+            <div class="Footer__col Footer__links">
+                <h4 class="Footer__heading">Enlaces</h4>
+                <ul class="Footer__list">
+                    <li><a href="/">Inicio</a></li>
+                    <li><a href="tienda.html">Tienda</a></li>
+                    <li><a href="comprar.html">Comprar</a></li>
+                </ul>
+            </div>
+
+            <div class="Footer__col Footer__contact">
+                <h4 class="Footer__heading">Contacto</h4>
+                <p><a href="mailto:info@tiendalocal.example">info@tiendalocal.example</a></p>
+                <p>Tel: +34 600 000 000</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 
